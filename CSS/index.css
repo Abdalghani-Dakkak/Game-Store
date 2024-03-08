@@ -1,0 +1,721 @@
+* {
+    margin: 0.5%;
+    padding: 0;
+}
+body {
+    background-color: #1c1632;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: auto 1fr 10%;
+    grid-template-areas: 'aside header' 'aside section' 'aside section' 'aside footer';
+    overflow-x: hidden;
+}
+
+input:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    max-height: 50%;
+    height: 50%;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background-color: #fdfef9;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* header */
+header {
+    padding: 1%;
+    grid-area: header;
+}
+
+header p , .i, footer p, .about-p {
+    font-size: 32px;
+    color: #fdfef9;
+    text-shadow: 0 0 15px #e600ff;
+    display: inline;
+}
+
+.i {
+    float: right;
+    margin: 0 2%;
+}
+
+.fa-slash{
+    transform: rotate(90deg);
+    font-size: 30px;
+    color: transparent;
+    text-shadow: 0 0 16px #e600ff;
+    margin: 0;
+}
+
+.s {
+    color: #fff;
+    text-shadow: none;
+}
+.s:hover {
+    color: #fdfef9;
+    text-shadow: 0 0 15px #e600ff;
+}
+
+.icon {
+    float: left;
+    margin: 0 1%;
+}
+
+header form {
+    display: inline;
+}
+
+/* serch box */
+#search {
+    width: 30%;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+    background-color: #484048;
+    color: #fdfef9;
+    font-size: 16px;
+    letter-spacing: 0.7px;
+    padding: 8px;
+    outline: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    float: right;
+    margin: 0 2%;
+    cursor: pointer;
+}
+
+/* The background od the head */
+#the-head {
+    position: relative;
+    background: url(../Images/7671274_1624.jpg);    
+    width: 102%;
+    height: 250px; 
+    border-radius: 15px;
+    margin-left: -1%;
+    margin-top: 17.12%;
+}
+
+#the-head::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: linear-gradient(90deg, rgba(181, 23, 158,0), rgba(181, 23, 158,.3), rgba(181, 23, 158,.2));
+}
+
+#the-head::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: linear-gradient(90deg, rgba(114, 9, 183,.2), rgba(114, 9, 183,.3), rgba(114, 9, 183,0));
+}
+
+/* 
+@media(max-width:1150px) {
+    * {
+        display: none;
+    }
+} */
+
+/* The imges in the background of the head */
+#the-head .img-1 {
+    position: absolute;
+    width: 42.01%;
+    bottom: 0px;
+    right: -3%;
+    transform: translateY(1.8%);
+    z-index: 1;
+}
+#the-head .img-2 {
+    position: absolute;
+    width: 21%;
+    top: 0;
+    right: 40%;
+    transform: translateY(-75%);
+    z-index: 1;
+}
+#the-head .img-3 {
+    position: absolute;
+    width: 25%;
+    top: 0;
+    left: 0;
+    transform: translateY(-60%);
+    z-index: -1; 
+}
+#the-head .img-4 {
+    position: absolute;
+    width: 33.6%;
+    bottom: 0px;
+    right: 55%;
+    transform: translateY(1.5%);
+    z-index: 1;
+}
+
+/* The aside  */
+aside {
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    grid-area: aside;
+    align-self: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* for firefox scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #fdfef9;
+    scrollbar-gutter: stable;
+    /* for firefox scrollbar */
+}
+
+/* Scrollbar */
+aside::-webkit-scrollbar {
+    width: 2px;
+    max-height: 50%;
+    height: 50%;
+}
+
+aside::-webkit-scrollbar-thumb {
+    border-radius: 50%;
+    background-color: #fdfef9;
+}
+
+aside::-webkit-scrollbar-button {
+    display: none;
+}
+/* Scrollbar */
+
+.img-as {
+    width: 210px;
+    margin: 200% 5% 0 -5%;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 9%;
+    transition: .3s;
+}
+
+.a {
+    margin: 10% 7%;
+    width: 15%;
+    text-align: center;
+}
+
+aside ul a:hover {
+    color: #fdfef9;
+    text-shadow: 0 0 15px #e600ff;
+}
+
+.active {
+    color: #fdfef9;
+    text-shadow: 0 0 15px #e600ff;
+}
+
+/* Create the element */
+.s1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 65px 25px;
+    grid-area: section;
+    margin-top: 100px;
+}
+
+.div {
+    position: relative;
+    background: url(../Images/background\ of\ call\ of\ duty.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(194, 90, 237,1), rgba(194, 90, 237,.4), rgba(194, 90, 237,0));
+    border-radius: 10px;
+}
+
+.div img {
+    position: absolute;
+    width: 67%;
+    height: 125%;
+    bottom: 0;
+    transform: translateY(.8%);
+    right: -10px;
+}
+
+.div .logo-game {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 50px;
+    left: 10px;
+}
+
+/* The footer */
+footer {
+    background-color: #120d21;
+    border-radius: 10px;
+    grid-area: footer;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 36px;
+}
+
+footer ul li, footer ul {
+    display: inline;    
+}
+
+footer ul li a {
+    text-decoration: none;
+    font-size: 155%;
+    color: #fdfef9;
+    margin: auto 15px;
+    transition: .3s;
+}
+
+footer ul li a:hover {
+    color: #9a42a4;
+}
+
+footer ul li a i {
+    font-size: 32px;
+}
+
+footer hr {
+    border-color: #74737b;
+}
+
+#copy-rights {
+    margin: calc(50% - 100px);
+    font-size: 20px;
+    text-shadow: none;
+    color: #74737b;
+}
+
+/* About Page */
+
+#About {
+    width: clac(100%);
+    background-color: rgba(70,70,70,0.3);
+    border-radius: 10px;
+    grid-area: section;
+    text-align: center;
+    padding: 25px;
+}
+
+.about-p {
+    font-size: 60px;
+}
+
+.about-p1 {
+    color: #fff;
+    font-size: 25px;
+    word-spacing: 2px;
+}
+
+#about-div {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 65px;
+    color: #fff;
+    word-spacing: 2px;
+}
+
+.a-icon {
+    font-size: 700%;
+    margin-bottom: 20px;
+}
+
+.a-h1 {
+    font-size: 220%;
+}
+
+.a-p {
+    margin: 10px;
+    font-size: 18px;
+}
+
+/* About Page */
+
+/* Help Page */
+
+#Help {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: #fff;
+    word-spacing: 2px;
+}
+
+.h-a {
+    text-decoration: none;
+    color: #fff;
+    height: 60px;
+    font-size: 25px;
+    text-align: left;
+    margin-top: 25px;
+    transition: .7s;
+    margin: 0.5% 4.188px;
+    padding-top: 15px;
+    letter-spacing: 2px;
+}
+
+.h-a:hover {
+    background-color: rgba(230, 0, 255, .15);
+}
+
+#contact-us-help-page {
+    color: #fdfef9;
+    text-align: center;
+    padding: 15px;
+}
+
+#contact-us-help-page:hover .contact-us-help-page{
+    color:#1c1632;
+}
+
+.contact-us-help-page {
+    display: inline;
+    font-size: 36px;
+}
+
+/* Help Page */
+
+/* The login and sign up div */
+
+#background-l-s {
+    background-color: rgba(153, 0, 255, 0.15);
+    filter: sepia(60%);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 9999;
+    display: none;
+}
+
+#perant {
+    background-color: transparent;
+    width: 400px;
+    height: 500px;
+    position: fixed;
+    top: 15%;
+    left: calc(50% - 200px);
+    z-index: 10000;
+    perspective: 1000px;
+    display: none;
+}
+
+#login-sign-up {
+    width: 400px;
+    height: 500px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transition: .5s;
+    transform-style: preserve-3d;
+}
+
+/* The login and sign up div */
+
+/* Login Div */
+
+#login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: #222;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 0 15px #e600ff;
+}
+
+/* login btn */
+#user1 {
+    display: block;
+}
+#user2 {
+    display: none;
+}
+/* login btn */
+
+
+#login h1, #Sign-up h1 {
+    text-align: center;
+    color: #fdfef9;
+    text-shadow: 0 0 15px #e600ff;
+    font-size: 60px;
+    letter-spacing: 2px;
+}
+
+#login hr, #Sign-up hr {
+    margin-top: 20px;
+}
+
+#login form input {
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    height: 35px;
+    margin: 5% 0;
+    border: none;
+    border-bottom: 1px solid #555;
+}
+
+#login form input::-webkit-input-placeholder {
+    font-size: 16px;
+}
+
+#login form #submit-1, #Sign-up form #submit-2 {
+    height: 40px;
+    background-color: #9a42a4;
+    border-bottom: none;
+    font-size: 25px;
+    color: #fdfef9;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.l-b-a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #9a42a4;
+    margin: 0 5%;
+}
+
+#login .hr {
+    width: 35%;
+    display: inline-block;
+    margin: 0 2%;
+}
+
+#hsh {
+    margin-top: 7%;
+    margin-left: 2%;
+}
+
+#login span {
+    color: #fff;
+    font-size: 22px;
+    margin: 0 6%;
+}
+
+#login h2 {
+    margin: 4% 0 5%;
+    color: #fdfef9;
+    text-align: center;
+    font-weight: 100;
+    font-size: 25px;
+}
+
+#with {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fdfef9;
+    display: inline;
+    border-radius: 5px;
+    background-color: rgba(154, 66, 164, .1);
+    width: 40%;
+    height: 50px;
+    margin: auto 30%;
+}
+
+.fa-google {
+    text-shadow: 0 0 15px #9a42a4;
+}
+
+/* Login Div */
+
+/* Sign Up Div */
+
+#Sign-up {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #222;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 0 15px #e600ff;
+}
+
+#Sign-up input, #login input {
+    background-color: transparent;
+    color: #fdfef9;
+    border: none;
+    border-bottom: 1px solid #555;
+    height: 35px;
+    margin: 3% auto;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+#Sign-up input[type=text] {
+    width: 45%;
+}
+
+#Sign-up input[type=text]:first-child {
+    margin-right: calc(10% - 4px);
+}
+
+#Sign-up input[type=email], #Sign-up input[type=password] {
+    width: 100%;
+}
+
+#Sign-up input[type=password] {
+    margin-bottom: 10%;
+}
+
+#Sign-up label {
+    color: #9a42a4;
+    font-size: 20px;
+}
+
+#Sign-up input[type=number] {
+    width: 30%;
+    margin: 2% 1.3%;
+}
+
+#Sign-up input[type=submit] {
+    width: 100%;
+    margin: 10% 0;
+}
+/* Remove Arrows/Spinners */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Remove Arrows/Spinners */
+
+#back {
+    width: 40px;
+    height: 50px;
+    font-size: 32px;
+    transform: rotate(180deg);
+    border-bottom-left-radius: 20px;
+    color: #fdfef9;
+    position: fixed;
+    top: 0;
+    right: -7.6px;
+    text-shadow: 0 0 15px #e600ff;
+}
+
+/* Sign Up Div */
+
+/* The Game Page */
+
+#the-game {
+    width: 99%;
+    height: 500px;
+    box-sizing: border-box;
+    background-color: rgba(70,70,70,0.3);
+    border-radius: 20px;
+    padding: 25px;
+    grid-area: section;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+}
+
+#img-of-game {
+    width: 100%;
+    height: 70%;
+    margin: auto;
+}
+
+#logo-game-download-page {
+    width: 50%;
+    height: 50%;
+    margin-top: 5%;
+}
+
+.game-div {
+    margin: 8% 0;
+}
+
+.game-div:first-child {
+    margin-top: 0;
+}
+
+#the-description {
+    color: #fdfef9;
+    margin: auto;
+}
+
+#the-description h2 {
+    display: inline;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#the-description span {
+    font-size: 20px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+.game-div #download {
+    width: 40%;
+    height: 50px;
+    background-color: #9a42a4;
+    border-radius: 5px;
+    color: #fdfef9;
+    float: left;
+    font-size: 25px;
+}   
+
+/* The Game Page */
