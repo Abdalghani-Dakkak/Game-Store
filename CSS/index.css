@@ -129,12 +129,11 @@ button {
     background: linear-gradient(90deg, rgba(114, 9, 183,.2), rgba(114, 9, 183,.3), rgba(114, 9, 183,0));
 }
 
-/* 
 @media(max-width:1150px) {
     * {
         display: none;
     }
-} */
+}
 
 /* The imges in the background of the head */
 #the-head .img-1 {
@@ -182,29 +181,7 @@ aside {
     position: fixed;
     top: 0;
     left: 0;
-    /* for firefox scrollbar */
-    scrollbar-width: thin;
-    scrollbar-color: #fdfef9;
-    scrollbar-gutter: stable;
-    /* for firefox scrollbar */
 }
-
-/* Scrollbar */
-aside::-webkit-scrollbar {
-    width: 2px;
-    max-height: 50%;
-    height: 50%;
-}
-
-aside::-webkit-scrollbar-thumb {
-    border-radius: 50%;
-    background-color: #fdfef9;
-}
-
-aside::-webkit-scrollbar-button {
-    display: none;
-}
-/* Scrollbar */
 
 .img-as {
     width: 210px;
